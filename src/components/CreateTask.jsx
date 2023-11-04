@@ -11,7 +11,7 @@ const CreateTask = () => {
 
     const addTask = () => {
         if (newTask.trim() !== '') {
-            setTasks([...tasks, { text: newTask, completed: false }]);
+            (!tasks) ? setTasks([{ text: newTask, completed: false }]) : setTasks([...tasks, { text: newTask, completed: false }]);
             setNewTask('');
         }
     };
