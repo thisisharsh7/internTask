@@ -12,7 +12,7 @@ const TaskList = () => {
     return (
         <ul>
             <AnimatePresence mode="poplayout">
-                {tasks.map((task, index) => (
+                {tasks?.map((task, index) => (
                     <Task completed={task.completed} text={task.text} index={index} key={index} />
                 ))}
             </AnimatePresence>
